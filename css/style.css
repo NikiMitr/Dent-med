@@ -132,7 +132,55 @@ nav ul {
     transform: scaleY(1);
 }
 /* ----------------------------------------------MAIN----------------------------------------------------- */
-
+.gallery__content{ 
+    margin: 0 auto; 
+    position: relative; 
+    margin-top: 10px; 
+    width: auto;
+    background-color: #f2f2f2;
+} 
+ 
+.gallery__slide{ 
+    height: 628.63px; 
+    width: 900px; 
+    display: none; 
+    margin: 0 auto;
+} 
+ 
+.gallery__slide.active{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 7px; 
+} 
+ 
+.gallery__slide img{ 
+    width: 900px; 
+    height: 600.12px; 
+} 
+ 
+#prev, #next { 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    cursor: pointer; 
+    transition: opacity .2s ease-in-out; 
+    height: 100%; 
+    width: 275px; 
+} 
+ 
+#prev:hover, #next:hover { 
+    opacity: 0.6; 
+} 
+ 
+#next { 
+    background: url(../img/next.png) no-repeat center; 
+    left: auto; 
+    right: 0; 
+} 
+ 
+#prev{ 
+    background: url(../img/prev.png) no-repeat center; 
+}
 /* ----------------------------------------------SECTION----------------------------------------------------- */
 
 h2{
@@ -775,6 +823,9 @@ footer .info1 a{
 }
 
 @media(max-width: 900px){
+    .gallery__content{
+        display: none;
+    }
 
     .news-cards-block__items {
         grid-template-columns: repeat(2, 1fr);
