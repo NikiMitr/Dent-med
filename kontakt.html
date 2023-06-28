@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Дент-Мед</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <img class="logo" src="img/Лого.png" alt="logo">
+        <h1>Стоматологическая клиника в Нижнем Новгороде</h1>
+        <div class="info"> 
+            <div class="info1"> 
+                <a href=""><img src="img/1773791-200 1.png"></a>
+                <a href="">Ульянова ул., 3 Нижний Новгород<br>С 8.00 по 20.00</a> 
+            </div> 
+            <div class="info1"> 
+                <a href="tel:+78437325636"><img src="img/reshot-icon-mobile-device-EGYMQ65PRS 1.png "></a> 
+                <a href="tel:+78437325636">+7 (915) 690 43 43<br>Звоните по любым вопросам</a>
+            </div>  
+        </div>
+    </div>      
+  </header>
+  <nav>
+    <ul class="topmenu">
+      <li><a href="" class="submenu-link">Главная</a>
+        <ul class="submenu">
+          <li><a href="">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОй ОРГАНИЗАЦИИ</a></li>             
+        </ul>
+      </li>
+      <li><a href="C:\Users\fhdvi\OneDrive\Рабочий стол\TGKGZ\new.html">Наши специалисты</a></li>
+      <li><a href="C:\Users\fhdvi\OneDrive\Рабочий стол\TGKGZ\worldskills.html">Услуги</a></li>
+      <li><a href="" class="submenu-link">Акции</a>
+        <ul class="submenu">
+          <li><a href="">20.02.02 Защита в чрезвычайных ситуациях</a></li>
+        </ul>
+      </li>          
+      <li><a href="">Информация</a></li>
+    </ul>
+  </nav>
+  
+  
+  <section>
+    <div class="map">	
+      <div class="wrp">
+        <div class="map-box">
+          <div class="map-block__adress-card">
+
+            <div class="map-block__img">
+              <a href="">
+                <img src="/img/kont/8c7503e122b42f862671d008e340434e.jpg" alt="">
+              </a>
+            </div>
+            <div class="map-block__items">
+              <div class="map-block__item map-block__item--metro">
+                      <img src="/img/kont/metro-icon-pink.svg">
+                <div class="map-block__label pink">
+                  <span>м. Балтийская</span>
+                  Старопетровский проезд, 7А, строение 22, 2 этаж			</div>
+              </div>
+          
+              <div class="map-block__item">
+                <img src="/img/kont/time-icon.svg" loading="lazy">
+                <div class="map-block__label-time">
+                  <b>Часы работы клиники</b>:<br>
+           с 09:00 до 21:30 по будням <br>
+           с 09:00 до 21:00 по выходным<br>
+                </div>
+              </div>
+          
+              <div class="map-block__btn-wrapp">
+                <a class="map-block__btn" href="/contacts/sm-stomatologiya-v-staropetrovskom-proezde/">Подробнее о клинике</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <div class="map-karta">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa8ea2d3159c23863309322fcc4f47266ac1903ef44b90b5facc55b3670c0cd8b&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=true"></script>
+    <script>
+    ymaps.ready(init); 
+    function init(){
+      var myMap = new ymaps.Map("map",{center: [55.85,37.45],zoom: 13});
+      
+      // Элементы управления картой
+      //myMap.controls.add("zoomControl").add("typeSelector").add("mapTools");
+      
+      ymaps.geocode("г. Москва, Тверская 7").then(function (res) {
+        var coord = res.geoObjects.get(0).geometry.getCoordinates();
+        var myPlacemark = new ymaps.Placemark(coord, {}, {
+          iconImageHref: "/img/map.png",
+          iconImageSize: [54, 74],
+          iconImageOffset: [-27, -74]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.setCenter(coord);	
+          
+        // Сдвиг центра карты вправо
+        var newcoord = myMap.getGlobalPixelCenter();
+        newcoord[0] -= 150;
+        myMap.setGlobalPixelCenter(newcoord);				
+      });
+    }
+    </script>
+    </div> 
+    
+  </section>
+
+
+  <footer>
+    <nav>
+      <ul class="topmenu">
+        <li><a href="" class="submenu-link">О нас</a>
+          <ul class="submenu">
+            <li><a href="">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОй ОРГАНИЗАЦИИ</a></li>             
+          </ul>
+        </li>
+        <li><a href="" class="submenu-link">Информация</a>
+          <ul class="submenu">
+            <li><a href="">20.02.02 Защита в чрезвычайных ситуациях</a></li>
+          </ul>
+        </li>          
+        <li><a href="">Информация</a>
+          <ul class="submenu">
+            <li><a href="">20.02.02 Защита в чрезвычайных ситуациях</a></li>
+          </ul></li>
+      </ul>
+    </nav>
+  <div class="foot">
+      <div>
+          <img class="logo" src="img/Логоf.png" alt="logo">
+          <h1>Ваша улыбка - наша забота</h1>
+      </div>
+      <div class="info"> 
+              <div class="info1"> 
+                  <a href=""><img src="img/reshot-icon-phone-YUPNL5R2TW (1) 1.png">+7 (915) 690 43 43</a> 
+              </div> 
+              <div class="info1"> 
+                  <a href="tel:+78437325636"><img src="img/whatsapp 1.png">+7 (915) 690 43 43</a> 
+              </div> 
+              <div class="info1"> 
+                  <a href="mailto:tetushi-tpu@mail.ru"><img src="img/reshot-icon-mail-GX3MTBULVF 1.png">dentomed@gmail.com</a> 
+              </div> 
+      </div>
+  </div>
+  <p class="end">
+      2022 © Все права защищены
+  </p>
+  </footer>
+</body>
+
+</html>
